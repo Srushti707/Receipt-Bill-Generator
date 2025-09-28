@@ -1,84 +1,57 @@
-# Receipt/Bill Generator
+### **Overview**
 
-A simple C program that generates a receipt or bill for a supermarket.  
-The program takes customer details and item quantities as input, calculates totals, and displays a formatted receipt.
+The **Receipt/Bill Generator** is a simple **C program** that allows a store or shop to generate detailed bills for customers. It takes **customer information** and **item quantities** as input, calculates totals for each category, and prints a **well-formatted receipt** showing all details and the grand total.
 
----
+### **Key Features**
 
-## Features
-- Input customer details: name, phone number, customer ID.
-- Enter item quantities for:
-  - Cosmetics (Body Soap, Hair Shampoo)
-  - Groceries (Tea, Rice, Wheat)
-  - Beverages (Sprite, Coke, Mojitos)
-- Automatic calculation of:
-  - Item-wise price
-  - Category totals
-  - Final bill amount
-- Prints a formatted receipt.
+1. **Customer Details**
 
----
+   * Enter **name**, **phone number**, and **customer ID**.
+   * These details are printed at the top of the receipt.
 
-## Requirements
-- GCC (MinGW for Windows or GCC for Linux/Mac)
-- Basic terminal/command prompt usage
+2. **Item Categories**
 
----
+   * **Cosmetics**: Body Soap, Hair Shampoo
+   * **Groceries**: Tea, Rice, Wheat
+   * **Beverages**: Sprite, Coke, Mojitos
 
-## Compilation and Execution
+3. **Quantity Input**
 
-### Windows (MinGW)
-gcc receipt_generator.c -o receipt_generator.exe
-.\receipt_generator.exe
+   * User enters the quantity for each item.
+   * The program calculates the **total price per item** based on fixed rates.
 
-##Example
+4. **Total Calculation**
 
-Input
+   * Calculates **category totals** (cosmetics, groceries, beverages).
+   * Calculates **grand total** for all items.
 
-Customer Name : Srushti
-Customer Number : 9876543210
-Customer Id : 101
+5. **Formatted Receipt**
 
-COSMETICS
-Body Soap (rs 10) : 2
-Hair Shampoo (rs 25) : 1
+   * Prints a clear, structured receipt.
+   * Displays itemized prices, category totals, and the final total.
+   * Makes it easier for shopkeepers and customers to review purchases.
 
-GROCERIES
-Tea (rs 15) : 3
-Rice (rs 150) : 1
-Wheat (rs 160) : 0
+### **How It Works**
 
-BEVERAGES
-Sprite (rs 20) : 2
-Coke (rs 40) : 1
-Mojitos (rs 120) : 0
+1. The program prompts the user to enter **customer details**.
+2. The user enters **quantities for items** in each category.
+3. Prices are calculated using **fixed rates**:
 
+   * Body Soap: ₹10, Hair Shampoo: ₹25
+   * Tea: ₹15, Rice: ₹150, Wheat: ₹160
+   * Sprite: ₹20, Coke: ₹40, Mojitos: ₹120
+4. The program calculates **category totals** and **grand total**.
+5. Prints a **formatted receipt** with all details.
 
-Output
+### **Use Cases**
 
-==================================================
-                GENERAL SUPERMART
-==================================================
-Customer Name         : Raj
-Customer Phone Number : 9876543210
-Customer Id           : 101
---------------------------------------------------
-Product Name          Quantity    Price
---------------------------------------------------
-Body Soap             2           20
-Hair Shampoo          1           25
-Tea                   3           45
-Rice                  1           150
-Wheat                 0           0
-Sprite                2           40
-Coke                  1           40
-Mojitos               0           0
---------------------------------------------------
-Cosmetics Total Price : 45
-Grocery Total Price   : 195
-Beverage Total Price  : 80
---------------------------------------------------
-Total Price           : 320
-==================================================
-gcc receipt_generator.c -o receipt_generator.exe
-.\receipt_generator.exe
+* Small retail shops generating bills manually.
+* Training purpose for learning **C programming**, **structures**, and **console I/O**.
+* Understanding basic **inventory and billing calculations**.
+
+### **Possible Improvements**
+
+* Add support for **dynamic pricing** (user enters price for items).
+* Include **discounts, taxes, and offers** in the calculation.
+* Save receipts to a **file** for future reference.
+* Add support for **more items and categories** dynamically.
